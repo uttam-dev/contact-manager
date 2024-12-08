@@ -1,0 +1,127 @@
+body {
+  background-image: url(../images/chat-bg.png);
+  object-fit: cover;
+}
+
+.wrapper {
+  margin: 2rem;
+}
+.wrapper .content-text {
+  padding: 3rem;
+  font-size: 2rem;
+  font-weight: 600;
+}
+
+.wrapper .row {
+  width: 40%;
+  display: flex;
+  flex-direction: column;
+  font-size: 1.1rem;
+  margin: 1rem auto;
+}
+
+.wrapper .row label {
+  display: flex;
+  align-items: center;
+  margin: 0.8rem 0.5rem;
+  text-transform: capitalize;
+}
+.wrapper .row label img {
+  width: 1.8rem;
+  margin-right: 1rem;
+}
+
+.wrapper .row label span {
+  color: red;
+}
+.wrapper .row input {
+  padding: 0.5rem 1rem;
+  border-radius: 10px;
+  border: 2px solid grey;
+  font-size: 1.3rem;
+}
+.wrapper .row input::-webkit-inner-spin-button,
+.wrapper .row input::-webkit-outer-spin-button {
+  display: none;
+}
+.wrapper .row input:hover {
+  background: #f0f0f0;
+}
+
+.wrapper .row .profile-content {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.wrapper .row .profile-content input[type="file"] {
+  width: 60%;
+  font-size: 0.8rem;
+}
+
+input[type="file"]::file-selector-button {
+  height: 100;
+  margin-right: 10px;
+  border: none;
+  background: var(--main-color);
+  padding: 0.5rem 2rem;
+  font-size: 1rem;
+  border-radius: 10px;
+  color: #fff;
+  cursor: pointer;
+  transition: background 0.2s ease-in-out;
+}
+
+input[type="file"]::file-selector-button:hover {
+  background: var(--main-color-hover);
+}
+
+.wrapper .row .priview-profile {
+  width: 5rem;
+  height: 5rem;
+  overflow: hidden;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+}
+.wrapper .row .priview-profile img {
+  width: 100%;
+  object-fit: cover;
+  object-position: center;
+}
+.profile-img {
+  width: 7rem !important;
+  height: 7rem !important;
+  display: flex;
+  margin: 1rem auto;
+  justify-content: center;
+  align-items: center;
+  border-radius: 50%;
+  overflow: hidden;
+  object-fit: contain;
+  object-position: center;
+  background: #fff;
+}
+.profile-img img {
+  width: 100%;
+}
+.err-msg {
+  font-size: 1rem;
+  color: red;
+  text-transform: capitalize;
+}
+.submit-btn {
+  width: fit-content;
+  border-radius: 10px;
+  margin: 1rem auto;
+  padding: 0.8rem 2rem;
+  background-color: var(--main-color);
+  font-size: 1rem;
+  color: var(--main-text-color);
+  cursor: pointer;
+  transition: all 0.2s;
+  border: none;
+}
+.submit-btn:hover {
+  background-color: var(--main-color-hover);
+}

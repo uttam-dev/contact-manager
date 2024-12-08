@@ -1,0 +1,137 @@
+.add-contact-btn {
+  position: fixed;
+  width: 50px;
+  height: 50px;
+  right: 3rem;
+  bottom: 3rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: var(--main-color);
+  border-radius: 50%;
+  padding: 2rem;
+  cursor: pointer;
+}
+
+.add-contact-btn img {
+  width: 30px;
+}
+
+.wrapper {
+  width: 100%;
+}
+
+.top-header-content {
+  width: 100%;
+  display: flex;
+  padding: 3rem;
+  border-bottom: 2px solid #9b9b9b;
+}
+
+
+.top-header-content .left-content {
+  width: 50%;
+  font-size: 2rem;
+  font-weight: 600;
+}
+.top-header-content .right-content {
+  width: 50%;
+  display: flex;
+  justify-content: end;
+}
+.top-header-content .right-content #search-input {
+  width: 40%;
+  border-radius: 10px;
+  border: 2px solid grey;
+  margin-right: 1.5rem;
+  padding: 0.5rem;
+  font-size: 1rem;
+}
+@media  screen and (max-width:800px) {
+  .top-header-content {
+    padding: 1rem;
+  }
+  .top-header-content .left-content {
+    font: .8rem;
+  }
+}
+.top-header-content .right-content #search-btn {
+  padding: 0.5rem 1rem;
+  border-radius: 10px;
+  font-size: 1rem;
+  border: 2px solid grey;
+  background-color: var(--main-color);
+  color: var(--main-text-color);
+  transition: all 0.2s;
+}
+.top-header-content .right-content #search-btn:hover {
+  background-color: var(--main-color-hover);
+}
+
+.main-content {
+  padding: 2rem 1rem;
+}
+.main-content table {
+  width: 100%;
+}
+
+.main-content table tr td {
+  text-align: center;
+  padding: 0.5rem 1rem;
+  border-bottom: 2px solid #80808065;
+}
+.main-content table tr td.no-contacts {
+  font-size: 1.5rem;
+  text-align: center;
+  padding-block: 5rem;
+}
+
+.main-content table tr td .profile ,
+.main-content table tr td .profile > img{
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-weight: 500;
+  color: var(--main-text-color);
+}
+
+.main-content table tr td .profile  img {
+  width: 100%;
+  object-fit: cover;
+  object-position: center;
+}
+
+.main-content table tr .icon {
+  width: 25px;
+}
+
+/* pagination */
+.pagination {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 15px;
+}
+.pagination a {
+  margin: 2rem 0;
+  padding: 0.5rem 1rem;
+  background-color: var(--main-color);
+  color: var(--main-text-color);
+  border-radius: 2px;
+  text-decoration: none;
+  text-align: center;
+  text-transform: capitalize;
+}
+
+.pagination a.active {
+  background-color: var(--main-color-bright);
+  pointer-events: none;
+  cursor: default;
+}
+
+.pagination a:hover {
+  background-color: var(--main-color-hover);
+}

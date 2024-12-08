@@ -1,0 +1,180 @@
+@font-face {
+  font-family: hostGrotesk;
+  src: url("HostGrotesk-VariableFont_wght.ttf");
+}
+:root {
+  /* --main-color: #099448;
+  --main-color-bright: #1cc066;
+  --main-color-hover: #077639;
+  --main-text-color: #f6f6f6; */
+  --main-color: #354f52;
+  --main-color-bright: #52796f;
+  --main-color-hover: #2f3e46;
+  --main-text-color: #f6f6f6;
+}
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: hostGrotesk;
+}
+.header {
+  width: 100%;
+  font-size: 2rem;
+  display: flex;
+  align-items: center;
+  background-color: var(--main-color);
+  padding: 1rem 1.3rem;
+}
+.nav {
+  width: 100%;
+  /* padding: 1rem 0.8rem; */
+}
+.nav .header-label a {
+  width: fit-content;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  word-spacing: 5px;
+  font-weight: 400;
+  color: var(--main-text-color);
+  text-decoration: none;
+}
+.nav .header-label a img {
+  width: 2.5rem;
+  margin-right: 0.8rem;
+}
+
+.header .login {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  /* width: 100%; */
+  /* padding: 1rem .8rem; */
+}
+.header .login a {
+  background-color: var(--main-text-color);
+  color: var(--main-color);
+  border-radius: 10px;
+  padding: 0.6rem 1.2rem;
+  font-size: 1.2rem;
+  transition: all 0.2s ease-in-out;
+}
+.header .login a:hover {
+  background-color: var(--main-color-hover);
+  color: var(--main-text-color);
+  outline: 2px solid var(--main-text-color);
+}
+
+/* Modal */
+
+.modal {
+  position: absolute;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100vh;
+  background-color: #000000aa;
+  backdrop-filter: blur(3px);
+  visibility: hidden;
+  opacity: 0;
+  transition: all 0.3s;
+}
+.modal .modal-body {
+  padding: 1rem;
+  width: fit-content;
+  background-color: var(--main-text-color);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  border-radius: 5px;
+}
+.modal .modal-body .cross {
+  width: 100%;
+  text-align: end;
+  font-size: 1.4rem;
+  color: #4f4f4f;
+  cursor: pointer;
+}
+
+.modal .modal-body .title {
+  font-size: 1.5rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0.5rem 1rem 1rem;
+  gap: 1rem;
+}
+.modal .modal-body .title img {
+  width: 2rem;
+}
+
+.modal .modal-body .details {
+  padding: 1rem 3rem;
+  color: #4f4f4f;
+}
+.modal .modal-body .buttons {
+  width: 100%;
+  padding: 1rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.modal .modal-body .buttons .btn {
+  padding: 1rem 1.4rem;
+  font-size: 1rem;
+  margin: 1rem;
+  border-radius: 5px;
+  border: 2px solid #db1313cf;
+  cursor: pointer;
+  transition: all 0.2s;
+}
+.modal .modal-body .buttons .btn-yes {
+  background-color: #db1313cf;
+  color: var(--main-text-color);
+}
+.modal .modal-body .buttons .btn-yes:hover {
+  background-color: #f54444cf;
+}
+.modal .modal-body .buttons .btn-no:hover {
+  background-color: #d3d3d3cf;
+}
+
+/* Notify popup */
+.notify-popup {
+  position: fixed;
+  bottom: 0.5rem;
+  right: 50%;
+  opacity: 0;
+  transform: translateX(50%);
+  background-color: #151515d9;
+  color: var(--main-text-color);
+  padding: 0.5rem 1.5rem;
+  border-radius: 30px;
+  transition: all 0.2s;
+}
+.notify-popup.active {
+  bottom: 3rem;
+  opacity: 1;
+}
+
+
+@media screen and (max-width:800px) {
+  .header{
+    font-size : 1rem;
+  }
+  .nav .header-label a img {
+    width: 1.5rem;
+  }
+  .header .login a {
+    padding: 0.6rem 1.2rem;
+    font-size: 1rem;
+  }
+}
